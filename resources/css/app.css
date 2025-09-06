@@ -1,0 +1,50 @@
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.header {
+    background-color: rgb(0, 237, 245);
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+
+}
+
+.content {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* biar tombol & card ke tengah */
+    gap: 20px; /* jarak antar elemen */
+}
+
+.btn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.1s ease-in-out;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease-in-out;
+
+}
+
+.card h4 {
+    margin: 0;
+    transition: transform 0.1s ease-in-out;
+
+}
