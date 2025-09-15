@@ -3,15 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
-    // Tampilkan semua data mahasiswa
     public function index()
     {
-        $mahasiswas = DB::table('mahasiswa')->get(); // ambil semua data
-        return view('mahasiswa.index', compact('mahasiswas')); // kirim ke view
+        // menampilkan form
+        return view('form-pendaftaran');
+    }
+
+    public function prosesForm(Request $request)
+    {
+        // mengirim data ke view hasil
+        return view('hasil-pendaftaran', [
+            'nim'           => $request->nim,
+            'nama'          => $request->nama,
+            'email'         => $request->email,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'jurusan'       => $request->jurusan,
+            'alamat'        => $request->alamat,
+        ]);
     }
 }
-
